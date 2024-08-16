@@ -2,17 +2,26 @@
   display: flex;
   gap: 10px;
   /* border: 0.5px lightgray solid; */
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Adjust this value based on your layout */
+  /* Add other styles as needed */
 }
 .product-strip-images {
   height: auto;
   width: 100%;
   padding: 20px;
-  border: 1px solid lightgray;
+  /* border: 1px solid lightgray; */
+  border-bottom: 1px solid lightgray;
   object-fit: cover;
 }
 
+.product-strip-images:hover {
+  box-shadow: 0px 0px 1px 0px gray;
+}
+
 .product-image-strip-column {
-  width: 10vw;
+  width: 5vw;
 }
 
 .product-main-image-container {
@@ -25,4 +34,19 @@
   padding: 20px;
   border: 1px solid lightgray;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 720px) {
+  .product-image-strip-column {
+    width: 20%;
+    border: 1px solid lightgray;
+    padding: 5px;
+  }
+  .product-main-image-container {
+    width: 80%;
+  }
+
+  .product-strip-images {
+    padding: 0px;
+  }
 }

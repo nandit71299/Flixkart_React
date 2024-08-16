@@ -6,7 +6,6 @@ import Carousel from "../components/UIElements/Carousel";
 import DealsBanner from "../components/HomePage/DealsBanner/DealsBanner";
 import PartnerOffers from "../components/HomePage/PartnerOffers/PartnerOffers";
 import BestSellersOnFashion from "../components/HomePage/BestSellersOnFashion/BestSellersOnFashion";
-import Footer from "../components/Footer/Footer";
 
 const data = [
   "https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/b35a105fe8bc8cbb.png?q=20",
@@ -17,7 +16,7 @@ const data = [
 
 export default function HomePage() {
   return (
-    <div className="background">
+    <div className="homepage-background">
       <Products />
       <Carousel images={data} />
       <DealsBanner />

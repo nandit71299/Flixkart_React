@@ -22,14 +22,15 @@ export default function Navbar() {
         </form>
       </div>
       <div className="navbar--menu">
-        <div
-          className="login"
+        <button
+          className="login btn "
           onMouseEnter={() => {
             setIsHovered(true);
           }}
           onMouseLeave={() => {
             setIsHovered(false);
           }}
+          onClick={() => setIsHovered(true)}
         >
           <img
             src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg"
@@ -43,21 +44,21 @@ export default function Navbar() {
               <p>Wishlist</p>
             </div>
           )}
-        </div>
-        <div className="cart">
+        </button>
+        <button className="cart btn">
           <img
             src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
             alt=""
           />
           <h6>Cart</h6>
-        </div>
-        <div className="seller">
+        </button>
+        <button className="seller btn">
           <img
             src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/Store-9eeae2.svg"
             alt=""
           />
           <h6>Seller</h6>
-        </div>
+        </button>
       </div>
     </nav>
   );

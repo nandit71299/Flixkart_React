@@ -1,0 +1,28 @@
+.product-image-container {
+  display: flex;
+  gap: 10px;
+  /* border: 0.5px lightgray solid; */
+}
+.product-strip-images {
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid lightgray;
+  object-fit: cover;
+}
+
+.product-image-strip-column {
+  width: 10vw;
+}
+
+.product-main-image-container {
+  width: 30vw;
+}
+
+.product-main-image {
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid lightgray;
+  object-fit: cover;
+}

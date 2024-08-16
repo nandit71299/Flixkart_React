@@ -1,0 +1,96 @@
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100vw; */
+  gap: 2rem;
+  /* flex-wrap: wrap; */
+  padding-right: 3rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.navbar--search {
+  width: 100%;
+}
+
+.navbar--menu {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar--menu .login,
+.navbar--menu .cart,
+.navbar--menu .seller {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar--menu .login {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.navbar--menu .login:hover {
+  background-color: #2874f0;
+  color: white;
+}
+.login-menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 0px;
+  color: black;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Start with the menu hidden */
+  transform: translateY(-10px); /* Start slightly above */
+  top: 55px;
+  border-radius: 0.5rem;
+  width: 10%;
+  transition: all 0.3s ease-in; /* Transition for opacity and transform */
+}
+
+.login-menu:hover {
+  opacity: 1; /* Make the menu visible */
+  transform: translateY(0); /* Move it to the original position */
+}
+
+.login-menu > p {
+  padding: 10px;
+  margin: 0;
+  border-radius: 0.5rem;
+}
+
+.login-menu > p:hover {
+  color: white;
+  cursor: pointer;
+  background-color: blue;
+}
+
+.navbar--menu .login h6,
+.navbar--menu .cart h6,
+.navbar--menu .seller h6 {
+  margin: 0%;
+}
+
+@media only screen and (max-width: 760px) {
+  .navbar--menu {
+    gap: 20px;
+  }
+
+  .navbar--menu .cart h6 {
+    display: none;
+  }
+  .navbar--menu .seller h6 {
+    display: none;
+  }
+  .navbar--menu .login h6 {
+    display: none;
+  }
+  .search-form {
+    display: none;
+  }
+}

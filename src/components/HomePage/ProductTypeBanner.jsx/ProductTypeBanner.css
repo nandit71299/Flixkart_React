@@ -1,0 +1,18 @@
+.product-type-banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+}
+
+.product-image {
+  width: 50%;
+  height: auto;
+}
+
+.product-title {
+  overflow: hidden;
+}

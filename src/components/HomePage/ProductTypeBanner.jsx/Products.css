@@ -1,0 +1,9 @@
+.products-container {
+  display: flex;
+  max-height: 50%;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  padding-top: 2rem;
+  background-color: white;
+}

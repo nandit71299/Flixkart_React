@@ -26,6 +26,9 @@
 .justify-center {
   justify-content: center;
 }
+.justify-space-between {
+  justify-content: space-between;
+}
 
 .gapp5 {
   gap: 0.5rem;
@@ -110,7 +113,7 @@
 }
 
 .text-bold {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .text-gray {
@@ -124,6 +127,10 @@
 .img-responsive {
   height: auto;
   width: 100%;
+}
+
+.img-lg {
+  width: 15%;
 }
 
 .img-sm {
@@ -174,9 +181,6 @@
 
 .bg-reddish-orange {
   background-color: #fb641b;
-}
-
-.product-page-related-products-container {
 }
 
 @media only screen and (max-width: 720px) {

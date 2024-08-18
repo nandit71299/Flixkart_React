@@ -58,7 +58,7 @@ export default function Product(props) {
       <div className="product-page-container nowrap">
         <div className="product-page-image-container">
           {product.images && product.images.length > 0 ? (
-            <ProductImage data={product.images} />
+            <ProductImage data={product.images} productId={product.id} />
           ) : (
             <div>No images available</div>
           )}

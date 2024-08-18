@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./ProductImage.css";
 
@@ -61,13 +62,19 @@ export default function ProductImage(props) {
             </svg>
             &nbsp;Add To Cart
           </button>
-          <button className="w100 btn text-bold text-white font-small bg-reddish-orange pp5">
-            <img
-              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMHY3LjdoMi4xVjE0TDcgNS42SDQuMkw3IDAiIGZpbGw9IiNGRkYiLz48L3N2Zz4="
-              alt=""
-            />
-            BUY NOW
-          </button>
+          <Link
+            // className="w100 btn text-bold text-white font-small bg-reddish-orange pp5"
+            to={`/checkout/${props.productId}`}
+            className="text-decoration-none text-white w100 btn text-bold text-white font-small bg-reddish-orange pp5"
+          >
+            <button className="w100 btn text-bold text-white font-small bg-reddish-orange pp5">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMHY3LjdoMi4xVjE0TDcgNS42SDQuMkw3IDAiIGZpbGw9IiNGRkYiLz48L3N2Zz4="
+                alt=""
+              />
+              BUY NOW
+            </button>
+          </Link>
         </div>
         {/* Display the selected image */}
       </div>

@@ -6,6 +6,8 @@ import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import Footer from "./components/Footer/Footer";
 import ErrorPage from "./pages/ErrorPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import OrderConfirmation from "./components/OrderConfirmationPage/OrderConfirmation";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/checkout/:id" element={<CheckoutPage />} />
+        <Route path="/order-confirmation/:id" element={<OrderConfirmation />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />

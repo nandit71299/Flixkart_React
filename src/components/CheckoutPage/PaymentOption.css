@@ -1,0 +1,37 @@
+.payment-option-container {
+  transition: background-color 0.3s ease, opacity 0.3s ease-in-out;
+  border-radius: 5px;
+  overflow: hidden; /* Hide overflow */
+  max-height: 500px; /* Set a maximum height for the content */
+}
+
+/* Inactive state: white background, blue text */
+.payment-option-container.inactive {
+  background-color: white;
+  opacity: 0; /* Fade out when inactive */
+  pointer-events: none; /* Disable interaction when hidden */
+}
+
+.payment-option-container.inactive .heading h6 {
+  color: #2874f0; /* Blue color */
+}
+
+.payment-option-container.inactive .btn {
+  background-color: white;
+  color: #2874f0; /* Blue color */
+}
+
+/* Active state: blue background, white text */
+.payment-option-container.active {
+  background-color: #2874f0; /* Blue color */
+  opacity: 1; /* Fully visible when active */
+}
+
+.payment-option-container.active .heading h6 {
+  color: white;
+}
+
+.payment-option-container.active .btn {
+  background-color: #2874f0; /* Blue color */
+  color: white;
+}

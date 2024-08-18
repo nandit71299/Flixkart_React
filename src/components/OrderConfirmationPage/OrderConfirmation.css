@@ -1,0 +1,87 @@
+.order-confirmation-container {
+  /* height: 80vh; */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.order-confirmation-svg {
+  width: 100px;
+  display: block;
+  margin: 40px auto 0;
+}
+
+.order-confirmation-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+}
+
+.order-confirmation-circle {
+  -webkit-animation: order-confirmation-dash 0.9s ease-in-out;
+  animation: order-confirmation-dash 0.9s ease-in-out;
+}
+
+.order-confirmation-line {
+  stroke-dashoffset: 1000;
+  -webkit-animation: order-confirmation-dash 0.9s 0.35s ease-in-out forwards;
+  animation: order-confirmation-dash 0.9s 0.35s ease-in-out forwards;
+}
+
+.order-confirmation-check {
+  stroke-dashoffset: -100;
+  -webkit-animation: order-confirmation-dash-check 0.9s 0.35s ease-in-out
+    forwards;
+  animation: order-confirmation-dash-check 0.9s 0.35s ease-in-out forwards;
+}
+
+.order-confirmation-para {
+  text-align: center;
+  margin: 20px 0 60px;
+  font-size: 1.25em;
+}
+
+.order-confirmation-success {
+  color: #73af55;
+}
+
+.order-confirmation-error {
+  color: #d06079;
+}
+
+@-webkit-keyframes order-confirmation-dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes order-confirmation-dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes order-confirmation-dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+
+@keyframes order-confirmation-dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
+}

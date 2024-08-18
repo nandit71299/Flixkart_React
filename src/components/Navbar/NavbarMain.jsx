@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "./NavbarMain.css";
 import SearchBar from "../UIElements/SearchBar";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [hovered, setIsHovered] = React.useState(false);
@@ -9,10 +10,12 @@ export default function Navbar() {
   return (
     <nav className="navbar-container">
       <div className="navbar--logo">
-        <img
-          src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"
-          alt=""
-        />
+        <Link to={"/"}>
+          <img
+            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"
+            alt=""
+          />
+        </Link>
       </div>
       <div className="navbar--search">
         <form className="search-form">

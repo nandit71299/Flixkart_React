@@ -1,0 +1,46 @@
+/* Common transition for background, color, and transform changes */
+.login-container .bg-blue,
+.login-container .btn h6,
+.login-container .text-white,
+.login-container .font-large {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Toggle classes for the Login component */
+.login-container.active .bg-blue {
+  background-color: #2874f0; /* Blue background when active */
+}
+
+.login-container.inactive .bg-blue {
+  background-color: #ffffff; /* White background when inactive */
+  color: #2874f0; /* Change text color to blue */
+}
+
+.login-container.inactive .btn h6 {
+  color: #2874f0; /* Blue color for the button number */
+}
+
+.login-container.inactive .text-white {
+  color: #2874f0 !important; /* Change text color to blue when inactive */
+}
+
+.login-container.inactive .font-large {
+  color: #2874f0; /* Change the 'Change' button color to blue when inactive */
+}
+
+/* Slide transition for content display */
+.login-container .login-content {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  max-height: 500px; /* Set a maximum height to allow sliding */
+  opacity: 1; /* Visible by default */
+  transform: translateY(0); /* No movement by default */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.login-container.inactive .login-content {
+  max-height: 0; /* Collapse height to hide content */
+  opacity: 0; /* Fade out the content when inactive */
+  transform: translateY(-20px); /* Slide up the content */
+  pointer-events: none; /* Disable interaction when hidden */
+}

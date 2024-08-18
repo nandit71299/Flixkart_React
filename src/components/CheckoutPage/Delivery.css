@@ -1,0 +1,46 @@
+/* Common transition for background, color, and transform changes */
+.delivery-container .bg-blue,
+.delivery-container .btn h6,
+.delivery-container .text-white,
+.delivery-container .font-large {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Toggle classes for the Delivery component */
+.delivery-container.active .bg-blue {
+  background-color: #2874f0; /* Blue background when active */
+}
+
+.delivery-container.inactive .bg-blue {
+  background-color: #ffffff; /* White background when inactive */
+  color: #2874f0; /* Change text color to blue */
+}
+
+.delivery-container.inactive .btn h6 {
+  color: #2874f0; /* Blue color for the button number */
+}
+
+.delivery-container.inactive .text-white {
+  color: #2874f0 !important; /* Change text color to blue when inactive */
+}
+
+.delivery-container.inactive .font-large {
+  color: #2874f0; /* Change the 'Change' button color to blue when inactive */
+}
+
+/* Slide transition for content display */
+.delivery-container .delivery-content {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  max-height: 500px; /* Set a maximum height to allow sliding */
+  opacity: 1; /* Visible by default */
+  transform: translateY(0); /* No movement by default */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.delivery-container.inactive .delivery-content {
+  max-height: 0; /* Collapse height to hide content */
+  opacity: 0; /* Fade out the content when inactive */
+  transform: translateY(-20px); /* Slide up the content */
+  pointer-events: none; /* Disable interaction when hidden */
+}

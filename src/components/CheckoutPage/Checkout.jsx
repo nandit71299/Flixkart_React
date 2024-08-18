@@ -35,7 +35,8 @@ export default function Checkout() {
     setPaymentOptionsOpen(false);
   };
 
-  const handlePaymentTab = () => {
+  const handlePaymentTab = (event) => {
+    event.preventDefault();
     setLoginOpen(false);
     setDeliveryAddressOpen(false);
     setOrderSummaryOpen(false);
@@ -43,10 +44,10 @@ export default function Checkout() {
   };
 
   const { id: productId } = useParams();
-
+  console.log(isPaymentOptionsOpen);
   return (
     <div
-      className="container-fluid flex-container gap1 py-3"
+      className="container-fluid flex-container checkout-page-container gap1 py-3"
       style={{ flexWrap: "wrap" }}
     >
       <div className="checkout-page-form-container">

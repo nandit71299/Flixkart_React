@@ -44,3 +44,13 @@
   transform: translateY(-20px); /* Slide up the content */
   pointer-events: none; /* Disable interaction when hidden */
 }
+
+@media only screen and (max-width: 720px) {
+  .delivery-container-address-content {
+    gap: 0px;
+    margin-top: 20px;
+  }
+  .delivery-container-contact-content {
+    font-size: 14px !important;
+  }
+}

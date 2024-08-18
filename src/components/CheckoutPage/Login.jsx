@@ -27,7 +27,7 @@ export default function Login({
         </div>
       </div>
       {isLoginOpen && (
-        <div className="flex-container container-fluid bg-white py-4 px-4 w100">
+        <div className="flex-container container-fluid bg-white py-4 px-4 w100 login-container-content">
           <div className="flex-container flex-column w100">
             <p className="text-gray font-small">
               Name{" "}
@@ -42,7 +42,7 @@ export default function Login({
               </span>
             </p>
             <button
-              className="border-0 bg-warning border-rounded bg-blue text-white px-5 py-3 w-75"
+              className="border-0 bg-warning border-rounded bg-blue text-white px-5 py-3 w-75 login-container-continue-btn"
               onClick={handleDeliveryTab}
             >
               Continue to Checkout

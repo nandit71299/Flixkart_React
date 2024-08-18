@@ -2,10 +2,8 @@ import React from "react";
 import "./PaymentOption.css";
 
 import { Link } from "react-router-dom";
-import OrderConfirmation from "../OrderConfirmationPage/OrderConfirmation";
 
 export default function PaymentOption({ isPaymentOptionsOpen, productId }) {
-  console.log(isPaymentOptionsOpen);
   return (
     <div
       className={`payment-option-container ${
@@ -54,7 +52,13 @@ export default function PaymentOption({ isPaymentOptionsOpen, productId }) {
           </div>
           <div>
             <Link to={`/order-confirmation/${productId}`}>
-              <button className="btn bg-warning text-white font-bold">
+              <button
+                onClick={(e) => {
+                  console.log(e);
+                  e.stopPropagation();
+                }}
+                className="btn bg-warning text-white font-bold"
+              >
                 Place Order
               </button>
             </Link>

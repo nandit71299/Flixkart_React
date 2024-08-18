@@ -67,7 +67,7 @@ export default function OrderSummary({
         </div>
       </div>
       {isOrderSummaryOpen && (
-        <div className="flex-container">
+        <div className="order-summary-container-content flex-container">
           {loading ? (
             <div className="w-100 h-100 py-4 px-4">
               <div
@@ -156,7 +156,11 @@ export default function OrderSummary({
             <div>
               <button
                 className="btn bg-warning w-100 text-white"
-                onClick={handlePaymentTab} // Opens Payment Option tab
+                onClick={(e) => {
+                  console.log(e);
+                  e.preventDefault(); // Prevent default scrolling behavior
+                  handlePaymentTab(e); // Opens Payment Option tab
+                }}
               >
                 Continue
               </button>

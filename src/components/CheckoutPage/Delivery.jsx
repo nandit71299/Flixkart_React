@@ -41,22 +41,26 @@ export default function Delivery({
               onChange={() => {}}
             />
           </div>
-          <div className="flex-container flex-column w100 gapp5">
-            <div className="flex-container gap1">
-              <p className="text-bold fs-6 m0">Nandit Sareria</p>
-              <p className="text-bold fs-6 m0">+91 1234567890</p>
+          <div className="flex-container flex-column w100 gapp5 delivery-container-contact-content">
+            <div className="flex-container gap1 flex-wrap">
+              <p className="text-bold  m0">Nandit Sareria</p>
+              <p className="text-bold m0">+91 9234567890</p>
             </div>
-            <div className="flex-container gapp5 font-small">
+            <div className="flex-container gapp5 font-small flex-wrap delivery-container-address-content">
               <p>267, Lawyer Chamber Court</p>
               <p>Delhi,</p>
-              <strong>+91 23381655,</strong>
-              <strong>110001,</strong>
-              <strong>India</strong>
+              <p className="text-bold">+91 23381655,</p>
+              <p className="text-bold">110001,</p>
+              <p className="text-bold">India</p>
             </div>
             <div>
               <button
                 className="btn bg-warning text-white"
-                onClick={handleOrderTab}
+                onClick={(e) => {
+                  console.log(e);
+                  e.preventDefault();
+                  handleOrderTab(e);
+                }}
               >
                 Deliver Here
               </button>

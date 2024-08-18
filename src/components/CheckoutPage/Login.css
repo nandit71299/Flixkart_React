@@ -44,3 +44,13 @@
   transform: translateY(-20px); /* Slide up the content */
   pointer-events: none; /* Disable interaction when hidden */
 }
+
+@media only screen and (max-width: 720px) {
+  .login-container-content {
+    flex-wrap: wrap;
+  }
+  .login-container-continue-btn {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+}

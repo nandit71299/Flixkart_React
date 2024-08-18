@@ -5,3 +5,17 @@
 .checkout-page-price-details-container {
   width: 25%;
 }
+
+.checkout-page-container {
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 720px) {
+  .checkout-page-form-container {
+    width: 100%;
+  }
+
+  .checkout-page-price-details-container {
+    width: 100%;
+  }
+}

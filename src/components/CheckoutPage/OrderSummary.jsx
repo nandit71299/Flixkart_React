@@ -157,7 +157,6 @@ export default function OrderSummary({
               <button
                 className="btn bg-warning w-100 text-white"
                 onClick={(e) => {
-                  console.log(e);
                   e.preventDefault(); // Prevent default scrolling behavior
                   handlePaymentTab(e); // Opens Payment Option tab
                 }}

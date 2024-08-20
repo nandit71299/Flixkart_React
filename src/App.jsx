@@ -17,7 +17,10 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/checkout/:id" element={<CheckoutPage />} />
-        <Route path="/order-confirmation/:id" element={<OrderConfirmation />} />
+        <Route
+          path="/order-confirmation/:payment_id"
+          element={<OrderConfirmation />}
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />

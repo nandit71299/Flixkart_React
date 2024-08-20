@@ -44,7 +44,7 @@ export default function Checkout() {
   };
 
   const { id: productId } = useParams();
-  console.log(isPaymentOptionsOpen);
+
   return (
     <div
       className="container-fluid flex-container checkout-page-container gap1 py-3"

@@ -21,7 +21,6 @@ export default function ProductImage(props) {
 
   function handleClick(index) {
     setSelectedImage(images[index]);
-    console.log(selectedImage);
   }
 
   return (

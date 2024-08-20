@@ -57,7 +57,6 @@ export default function Delivery({
               <button
                 className="btn bg-warning text-white"
                 onClick={(e) => {
-                  console.log(e);
                   e.preventDefault();
                   handleOrderTab(e);
                 }}

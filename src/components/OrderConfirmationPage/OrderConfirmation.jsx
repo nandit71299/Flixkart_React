@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
 import qs from "qs"; // Import qs
+const env = import.meta.env;
 
 import "./OrderConfirmation.css";
 export default function OrderConfirmation() {
@@ -10,12 +11,10 @@ export default function OrderConfirmation() {
 
   const { payment_id } = useParams();
   useEffect(() => {
-    console.log(payment_id);
-
     const verifyPayment = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:3000/verify-payment",
+          `${env.VITE_BACKEND_URL}verify-payment`,
           qs.stringify({ payment_id }), // Encode the data
           {
             headers: {
@@ -23,7 +22,7 @@ export default function OrderConfirmation() {
             },
           }
         );
-        console.log(response);
+
         if (response.data.success) {
           setPaymentStatus("success");
         } else {

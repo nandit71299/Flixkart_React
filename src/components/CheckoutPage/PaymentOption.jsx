@@ -31,7 +31,7 @@ export default function PaymentOption({ isPaymentOptionsOpen, productId }) {
       return;
     }
 
-    const data = await fetch("http://localhost:3000/create-order", {
+    const data = await fetch(`${env.VITE_BACKEND_URL}create-order`, {
       method: "POST",
     }).then((t) => t.json());
 
@@ -43,7 +43,7 @@ export default function PaymentOption({ isPaymentOptionsOpen, productId }) {
       description: "Test Transaction",
       // image: "https://example.com/your_logo",
       order_id: data.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: "http://localhost:3000/order-confirmation/",
+      callback_url: `${env.VITE_BACKEND_URL}order-confirmation/`,
       notes: {
         address: "Test",
       },

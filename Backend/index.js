@@ -40,7 +40,7 @@ app.post("/order-confirmation", (req, res) => {
   // console.log(req.body);
   res.redirect(
     301,
-    `http://localhost:5173/order-confirmation/${req.body.razorpay_payment_id}`
+    `${process.env.FRONTEND_URL}order-confirmation/${req.body.razorpay_payment_id}`
   );
 });
 
